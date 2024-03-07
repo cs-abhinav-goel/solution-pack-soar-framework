@@ -263,7 +263,7 @@
                 "module": "alerts?$limit=30&$relationships=true&$fsr_max_relation_count=100",
                 "checkboxFields": true,
                 "step_variables": {
-                    "pendingTasksFound": "{% if vars.steps.Get_Pending_Tasks | length > 0 %}true{% else %}false{% endif %}"
+                    "pendingTasksFound": "{% if vars.steps.Get_Pending_Tasks[0].tasks | length > 0 %}true{% else %}false{% endif %}"
                 }
             },
             "status": null,
